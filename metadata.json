@@ -1,0 +1,6 @@
+{
+  "name": "Daya Wholesale Electronics",
+  "description": "B2B and wholesale electronic components marketplace inspired by Digikala with tiered pricing, BOM parser, parametric search, and tech stack comparison roadmap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
