@@ -172,8 +172,8 @@ export const BomAnalyzer: React.FC<BomAnalyzerProps> = ({
       <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-xs">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
           <div>
-            <div className="inline-flex items-center gap-1.5 bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold mb-2">
-              <FileSpreadsheet className="w-4 h-4" />
+            <div className="inline-flex items-center gap-1.5 bg-[#edf5f0] text-[#2d523b] px-3 py-1 rounded-full text-xs font-bold mb-2 border border-[#cbe0d2]">
+              <FileSpreadsheet className="w-4 h-4 text-[#3e6b4e]" />
               <span>موتور هوشمند استعلام لیست قطعات (BOM Instant Quoter)</span>
             </div>
             <h1 className="text-xl sm:text-2xl font-black text-slate-900">
@@ -204,7 +204,7 @@ export const BomAnalyzer: React.FC<BomAnalyzerProps> = ({
               <button
                 key={idx}
                 onClick={() => handleSelectPreset(preset)}
-                className="bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 border border-transparent text-slate-700 text-xs px-3 py-1.5 rounded-xl font-medium transition-all text-right"
+                className="bg-slate-100 hover:bg-[#edf5f0] hover:text-[#2d523b] hover:border-[#cbe0d2] border border-transparent text-slate-700 text-xs px-3 py-1.5 rounded-xl font-medium transition-all text-right"
               >
                 {preset.name}
               </button>
@@ -221,12 +221,12 @@ export const BomAnalyzer: React.FC<BomAnalyzerProps> = ({
             <div>
               <div className="flex items-center justify-between mb-2">
                 <label className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <Layers className="w-4 h-4 text-indigo-600" />
+                  <Layers className="w-4 h-4 text-[#3e6b4e]" />
                   <span>متن لیست قطعات (PartNumber, Quantity, Designator, Package)</span>
                 </label>
                 <button
                   onClick={() => setRawBomText('')}
-                  className="text-xs text-slate-400 hover:text-rose-600 flex items-center gap-1"
+                  className="text-xs text-slate-400 hover:text-[#3e6b4e] flex items-center gap-1"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                   پاکسازی
@@ -242,7 +242,7 @@ STM32F103C8T6, 100, U1, LQFP-48
 ESP32-WROOM-32E-N4, 50, U2, SMD-38
 AMS1117-3.3, 200, U3, SOT-223
 RC0603FR-0710KL, 5000, R1-R20, 0603"
-                className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-3 text-xs font-mono text-slate-800 focus:bg-white focus:outline-none focus:border-indigo-500 transition-all leading-relaxed"
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-3 text-xs font-mono text-slate-800 focus:bg-white focus:outline-none focus:border-[#3e6b4e] transition-all leading-relaxed"
               />
 
               <div className="mt-2 text-[11px] text-slate-500 leading-relaxed bg-slate-50 p-2.5 rounded-xl border border-slate-100">
@@ -253,7 +253,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
             <div className="pt-4 border-t border-slate-100 mt-4 flex items-center gap-3">
               <button
                 onClick={() => handleAnalyzeBom()}
-                className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-2xl text-xs transition-all shadow-md shadow-indigo-600/20 flex items-center justify-center gap-2"
+                className="flex-1 bg-[#3e6b4e] hover:bg-[#335840] text-white font-bold py-3 px-4 rounded-2xl text-xs transition-all shadow-md shadow-[#3e6b4e]/20 flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>تحلیل آنی موجودی و محاسبه قیمت</span>
@@ -266,7 +266,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
         <div className="lg:col-span-7 space-y-4">
           {!hasAnalyzed ? (
             <div className="bg-white rounded-3xl border border-slate-200 p-12 text-center shadow-xs">
-              <FileSpreadsheet className="w-14 h-14 text-indigo-200 mx-auto mb-3" />
+              <FileSpreadsheet className="w-14 h-14 text-[#95caa6] mx-auto mb-3" />
               <h3 className="text-base font-bold text-slate-800 mb-1">
                 لیست قطعات خود را وارد نموده و دکمه تحلیل را بزنید
               </h3>
@@ -275,7 +275,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
               </p>
               <button
                 onClick={() => handleAnalyzeBom()}
-                className="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-colors inline-flex items-center gap-2"
+                className="bg-[#3e6b4e] hover:bg-[#335840] text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-colors inline-flex items-center gap-2"
               >
                 اجرای نمونه پیش‌فرض
               </button>
@@ -283,10 +283,10 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
           ) : (
             <div className="bg-white rounded-3xl border border-slate-200 p-5 shadow-xs space-y-4">
               {/* Summary Stats Strip */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-indigo-50/60 p-3.5 rounded-2xl border border-indigo-100 text-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#edf5f0] p-3.5 rounded-2xl border border-[#cbe0d2] text-xs">
                 <div>
-                  <span className="text-[11px] text-indigo-700 block">تعداد ردیف قطعات:</span>
-                  <span className="text-base font-black text-indigo-950 font-mono">
+                  <span className="text-[11px] text-[#2d523b] block">تعداد ردیف قطعات:</span>
+                  <span className="text-base font-black text-[#223e2d] font-mono">
                     {parsedBom.length.toLocaleString('fa-IR')} ردیف
                   </span>
                 </div>
@@ -303,8 +303,8 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
                   </span>
                 </div>
                 <div>
-                  <span className="text-[11px] text-rose-700 block">جمع کل برآورد BOM:</span>
-                  <span className="text-base font-black text-rose-700 font-mono">
+                  <span className="text-[11px] text-[#2d523b] block">جمع کل برآورد BOM:</span>
+                  <span className="text-base font-black text-[#223e2d] font-mono">
                     {totalBomCost.toLocaleString('fa-IR')} ت
                   </span>
                 </div>
@@ -336,7 +336,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
                             type="checkbox"
                             checked={item.selected}
                             onChange={() => toggleItemSelection(item.id)}
-                            className="rounded text-indigo-600 focus:ring-indigo-500 h-4 w-4"
+                            className="rounded text-[#3e6b4e] focus:ring-[#3e6b4e] h-4 w-4"
                           />
                         </td>
                         <td className="p-3">
@@ -347,7 +347,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
                             </div>
                           )}
                           {item.packageFootprint && (
-                            <div className="text-[10px] text-indigo-600 font-mono">
+                            <div className="text-[10px] text-[#3e6b4e] font-mono">
                               فوت‌پرینت: {item.packageFootprint}
                             </div>
                           )}
@@ -373,7 +373,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
                                     `لطفا قطعه جایگزین و سازگار با پارت نامبر ${item.partNumber} را برای تیراژ ${item.quantity} عدد پیشنهاد دهید.`
                                   )
                                 }
-                                className="text-[10px] text-indigo-600 hover:underline flex items-center gap-0.5"
+                                className="text-[10px] text-[#3e6b4e] hover:underline flex items-center gap-0.5"
                               >
                                 <Sparkles className="w-2.5 h-2.5" />
                                 مشاوره معادل پین‌به‌پین
@@ -398,7 +398,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handleAddAllMatchedToCart}
-                    className="bg-rose-600 hover:bg-rose-700 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow-xs flex items-center gap-1.5"
+                    className="bg-[#3e6b4e] hover:bg-[#335840] active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow-xs flex items-center gap-1.5"
                   >
                     <ShoppingCart className="w-4 h-4" />
                     <span>افزودن کلیه قطعات موجود به سبد خرید ({matchedCount} قلم)</span>
@@ -406,7 +406,7 @@ RC0603FR-0710KL, 5000, R1-R20, 0603"
 
                   <button
                     onClick={() => onGenerateInvoiceFromBom(selectedItems)}
-                    className="bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow-xs flex items-center gap-1.5"
+                    className="bg-slate-900 hover:bg-slate-800 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow-xs flex items-center gap-1.5"
                   >
                     <FileText className="w-4 h-4" />
                     <span>صدور پیش‌فاکتور رسمی این BOM</span>

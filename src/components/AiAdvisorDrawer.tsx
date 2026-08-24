@@ -113,13 +113,13 @@ export const AiAdvisorDrawer: React.FC<AiAdvisorDrawerProps> = ({
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-gray-800 bg-gray-900 text-white flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-red-600 flex items-center justify-center text-white shadow-sm">
+              <div className="w-9 h-9 rounded-lg bg-[#3e6b4e] flex items-center justify-center text-white shadow-sm">
                 <Sparkles className="w-5 h-5" />
               </div>
               <div>
                 <h2 className="font-bold text-sm text-white flex items-center gap-1.5">
                   <span>مشاور هوش مصنوعی دایا</span>
-                  <span className="text-[10px] bg-red-500/20 text-red-300 px-1.5 py-0.2 rounded border border-red-500/30 font-mono">
+                  <span className="text-[10px] bg-[#3e6b4e]/30 text-[#95caa6] px-1.5 py-0.2 rounded border border-[#3e6b4e]/50 font-mono">
                     AI Sourcing
                   </span>
                 </h2>
@@ -149,7 +149,7 @@ export const AiAdvisorDrawer: React.FC<AiAdvisorDrawerProps> = ({
               <button
                 key={i}
                 onClick={() => handleSendPrompt(sug)}
-                className="bg-white hover:bg-red-50 hover:text-red-700 hover:border-red-300 border border-gray-200 px-2.5 py-1 rounded text-gray-700 whitespace-nowrap transition-colors"
+                className="bg-white hover:bg-[#edf5f0] hover:text-[#2d523b] hover:border-[#cbe0d2] border border-gray-200 px-2.5 py-1 rounded text-gray-700 whitespace-nowrap transition-colors"
               >
                 {sug}
               </button>
@@ -169,7 +169,7 @@ export const AiAdvisorDrawer: React.FC<AiAdvisorDrawerProps> = ({
                   className={`w-7 h-7 rounded-md flex items-center justify-center shrink-0 ${
                     msg.sender === 'user'
                       ? 'bg-gray-900 text-white'
-                      : 'bg-red-600 text-white'
+                      : 'bg-[#3e6b4e] text-white'
                   }`}
                 >
                   {msg.sender === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
@@ -197,8 +197,8 @@ export const AiAdvisorDrawer: React.FC<AiAdvisorDrawerProps> = ({
             ))}
 
             {isLoading && (
-              <div className="flex items-center gap-2 text-xs text-red-600 bg-red-50 p-3 rounded-lg border border-red-100 animate-pulse">
-                <RefreshCw className="w-4 h-4 animate-spin" />
+              <div className="flex items-center gap-2 text-xs text-[#2d523b] bg-[#edf5f0] p-3 rounded-lg border border-[#cbe0d2] animate-pulse">
+                <RefreshCw className="w-4 h-4 animate-spin text-[#3e6b4e]" />
                 <span>در حال تحلیل دیتاشیت و استعلام موجودی انبارهای دایا...</span>
               </div>
             )}
@@ -220,12 +220,12 @@ export const AiAdvisorDrawer: React.FC<AiAdvisorDrawerProps> = ({
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="سوال فنی، استعلام پارت نامبر یا جایگزین پین‌به‌پین..."
-                className="flex-1 bg-white border border-gray-300 focus:border-red-600 rounded-md px-3.5 py-2 text-xs outline-none text-gray-900"
+                className="flex-1 bg-white border border-gray-300 focus:border-[#3e6b4e] rounded-md px-3.5 py-2 text-xs outline-none text-gray-900"
               />
               <button
                 type="submit"
                 disabled={isLoading || !inputText.trim()}
-                className="bg-red-600 hover:bg-red-700 disabled:opacity-40 text-white p-2.5 rounded-md transition-all shadow-xs"
+                className="bg-[#3e6b4e] hover:bg-[#335840] disabled:opacity-40 text-white p-2.5 rounded-md transition-all shadow-xs"
               >
                 <Send className="w-4 h-4 rotate-180" />
               </button>

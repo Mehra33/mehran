@@ -111,9 +111,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                     onClose();
                     onOpenAdvisorWithPart(component.partNumber);
                   }}
-                  className="w-full bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 py-2 px-3 rounded-md text-xs font-semibold transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full bg-[#edf5f0] hover:bg-[#e2efe6] text-[#2d523b] border border-[#cbe0d2] py-2 px-3 rounded-md text-xs font-semibold transition-colors flex items-center justify-center gap-1.5"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-red-600" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#3e6b4e]" />
                   <span>مشاوره پین‌به‌پین و معادل‌های این قطعه</span>
                 </button>
               </div>
@@ -174,11 +174,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           <div className="border border-gray-200 rounded-xl p-4 sm:p-5 bg-gray-50">
             <div className="flex items-center justify-between mb-3">
               <div className="text-xs font-bold text-gray-900 flex items-center gap-1.5">
-                <Layers className="w-4 h-4 text-red-600" />
+                <Layers className="w-4 h-4 text-[#3e6b4e]" />
                 <span>جدول تخفیف‌های پلکانی تیراژ و قرقره کامل</span>
               </div>
               <span className="text-[11px] text-gray-500">
-                سطح شما: <strong className="text-red-600">{roleInfo.titleFa}</strong> ({roleInfo.discountPercentage}٪ کسر B2B)
+                سطح شما: <strong className="text-[#3e6b4e]">{roleInfo.titleFa}</strong> ({roleInfo.discountPercentage}٪ کسر B2B)
               </span>
             </div>
 
@@ -192,7 +192,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                     onClick={() => setSelectedQty(tier.minQty)}
                     className={`rounded-lg p-2.5 cursor-pointer border transition-all ${
                       isSelected
-                        ? 'bg-red-50 border-red-500 shadow-xs ring-1 ring-red-500'
+                        ? 'bg-[#edf5f0] border-[#3e6b4e] shadow-xs ring-1 ring-[#3e6b4e]'
                         : 'bg-white border-gray-200 hover:border-gray-300'
                     }`}
                   >
@@ -290,7 +290,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 onAddToCart(component, selectedQty, selectedPkg);
                 onClose();
               }}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-md text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+              className="bg-[#3e6b4e] hover:bg-[#335840] text-white px-6 py-2.5 rounded-md text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
             >
               <Package className="w-4 h-4" />
               <span>افزودن به سبد خرید دایا</span>

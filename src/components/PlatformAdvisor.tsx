@@ -40,7 +40,7 @@ export const PlatformAdvisor: React.FC = () => {
               onClick={() => setSelectedPlatformId(platform.id)}
               className={`rounded-2xl p-5 cursor-pointer transition-all border text-right flex flex-col justify-between ${
                 isSelected
-                  ? 'bg-white border-rose-500 shadow-lg ring-2 ring-rose-500/20'
+                  ? 'bg-white border-[#3e6b4e] shadow-lg ring-2 ring-[#3e6b4e]/20'
                   : 'bg-white border-slate-200 hover:border-slate-300 shadow-xs'
               }`}
             >
@@ -50,7 +50,7 @@ export const PlatformAdvisor: React.FC = () => {
                     TTM: {platform.ttmWeeks}
                   </span>
                   {isSelected && (
-                    <span className="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
+                    <span className="text-xs font-bold text-[#2d523b] bg-[#edf5f0] px-2 py-0.5 rounded-full border border-[#cbe0d2]">
                       انتخاب شده
                     </span>
                   )}
@@ -80,7 +80,7 @@ export const PlatformAdvisor: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-slate-100 text-xs font-medium text-rose-600 flex items-center justify-end gap-1">
+              <div className="pt-2 border-t border-slate-100 text-xs font-medium text-[#3e6b4e] flex items-center justify-end gap-1">
                 <span>مشاهده جزئیات فنی و افزونه‌ها</span>
                 <ArrowRight className="w-3.5 h-3.5 rotate-180" />
               </div>
@@ -93,7 +93,7 @@ export const PlatformAdvisor: React.FC = () => {
       <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xs">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-4 pb-6 border-b border-slate-100">
           <div>
-            <span className="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200 inline-block mb-2">
+            <span className="text-xs font-bold text-[#2d523b] bg-[#edf5f0] px-3 py-1 rounded-full border border-[#cbe0d2] inline-block mb-2">
               بررسی عمیق معماری
             </span>
             <h2 className="text-xl sm:text-2xl font-black text-slate-900">
@@ -181,7 +181,7 @@ export const PlatformAdvisor: React.FC = () => {
         {/* Recommended Themes / Plugins from Iranian Market (Zhaket & Rastchin) */}
         <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 mb-6">
           <div className="font-bold text-xs text-slate-900 mb-3 flex items-center gap-2">
-            <Layers className="w-4 h-4 text-rose-600" />
+            <Layers className="w-4 h-4 text-[#3e6b4e]" />
             <span>قالب‌ها، پلاگین‌ها و ابزارهای پیشنهادی در بازار ایران (ژاکت / راست‌چین):</span>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -197,8 +197,8 @@ export const PlatformAdvisor: React.FC = () => {
         </div>
 
         {/* Final Architectural Verdict */}
-        <div className="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-xs text-rose-950 flex items-start gap-3">
-          <Zap className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
+        <div className="p-4 rounded-2xl bg-[#edf5f0] border border-[#cbe0d2] text-xs text-[#223e2d] flex items-start gap-3">
+          <Zap className="w-5 h-5 text-[#3e6b4e] shrink-0 mt-0.5" />
           <div>
             <strong className="font-bold block mb-1">جمع‌بندی و توصیه تخصصی برای «دایا»:</strong>
             <p className="leading-relaxed">{selectedPlatform.verdictFa}</p>
@@ -218,13 +218,13 @@ export const PlatformAdvisor: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Phase 1 */}
           <div className="border border-slate-200 rounded-2xl p-5 bg-gradient-to-b from-slate-50 to-white relative">
-            <div className="w-8 h-8 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center mb-3">
+            <div className="w-8 h-8 rounded-full bg-[#3e6b4e] text-white font-bold text-xs flex items-center justify-center mb-3">
               ۱
             </div>
             <h3 className="font-bold text-sm text-slate-900 mb-1">
               فاز ۱: راه‌اندازی سریع با وردپرس و ووکامرس (MVP)
             </h3>
-            <div className="text-[11px] text-rose-600 font-semibold mb-3">مدت زمان: ۳ تا ۴ هفته</div>
+            <div className="text-[11px] text-[#3e6b4e] font-semibold mb-3">مدت زمان: ۳ تا ۴ هفته</div>
             <ul className="text-xs text-slate-600 space-y-2 leading-relaxed">
               <li>• نصب قالب وودمارت یا دیجی‌مارچ (خریداری از ژاکت/راست‌چین) با ظاهر کاملاً مشابه دیجی‌کالا.</li>
               <li>• راه‌اندازی افزونه B2BKing یا Wholesale Suite جهت تعریف قیمت‌های پلکانی قرقره و نقش همکاران.</li>
@@ -235,13 +235,13 @@ export const PlatformAdvisor: React.FC = () => {
 
           {/* Phase 2 */}
           <div className="border border-slate-200 rounded-2xl p-5 bg-gradient-to-b from-slate-50 to-white relative">
-            <div className="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center mb-3">
+            <div className="w-8 h-8 rounded-full bg-[#335840] text-white font-bold text-xs flex items-center justify-center mb-3">
               ۲
             </div>
             <h3 className="font-bold text-sm text-slate-900 mb-1">
               فاز ۲: ارتقای فیلتر پارامتریک و اتصال حسابداری سپیدار
             </h3>
-            <div className="text-[11px] text-indigo-600 font-semibold mb-3">مدت زمان: ماه دوم تا چهارم</div>
+            <div className="text-[11px] text-[#335840] font-semibold mb-3">مدت زمان: ماه دوم تا چهارم</div>
             <ul className="text-xs text-slate-600 space-y-2 leading-relaxed">
               <li>• یکپارچه‌سازی وب‌سرویس ووکامرس با نرم‌افزار حسابداری و انبارداری سپیدار سیستم یا همکاران سیستم.</li>
               <li>• پیاده‌سازی افزونه FacetWP و موتور کشینگ Redis برای سرچ آنی ۲۰,۰۰۰ پارت‌نامبر.</li>

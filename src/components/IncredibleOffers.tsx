@@ -22,32 +22,32 @@ export const IncredibleOffers: React.FC<IncredibleOffersProps> = ({
   if (flashDeals.length === 0) return null;
 
   return (
-    <section className="bg-red-600 rounded-2xl p-4 sm:p-6 text-white shadow-md mb-8">
+    <section className="bg-gradient-to-br from-[#2c4e38] via-[#355c43] to-[#3e6b4e] rounded-2xl p-4 sm:p-6 text-white shadow-md mb-8 border border-[#4d7d5d]/40">
       <div className="flex flex-col lg:flex-row items-stretch gap-6">
         {/* Left Sleek Badge Banner */}
-        <div className="lg:w-64 shrink-0 flex flex-col justify-between text-center lg:text-right border-b lg:border-b-0 lg:border-l border-red-500/50 pb-4 lg:pb-0 lg:pl-6">
+        <div className="lg:w-64 shrink-0 flex flex-col justify-between text-center lg:text-right border-b lg:border-b-0 lg:border-l border-white/20 pb-4 lg:pb-0 lg:pl-6">
           <div>
-            <div className="inline-flex items-center gap-1.5 bg-white/20 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wide">
+            <div className="inline-flex items-center gap-1.5 bg-white/20 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wide text-white">
               <Flame className="w-4 h-4 text-amber-300 animate-pulse" />
               <span>فروش ویژه عمده و قرقره</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-black leading-tight tracking-tight text-white mb-2 font-sans">
               پیشنهاد شگفت‌انگیز تیراژ و ریل
             </h2>
-            <p className="text-xs text-red-100 leading-relaxed">
+            <p className="text-xs text-white/80 leading-relaxed">
               تخفیف‌های استثنایی قطعات پرمصرف صنعتی با ضمانت اصالت فیزیکی و فاکتور رسمی
             </p>
           </div>
 
-          <div className="mt-4 pt-4 border-t border-red-500/50">
-            <div className="flex items-center justify-between text-xs text-red-100 mb-1">
+          <div className="mt-4 pt-4 border-t border-white/20">
+            <div className="flex items-center justify-between text-xs text-white/90 mb-1">
               <span className="font-medium">زمان باقی‌مانده کمپین:</span>
               <div className="flex items-center gap-1 font-mono font-bold bg-black/40 px-2.5 py-1 rounded text-amber-300">
                 <Clock className="w-3.5 h-3.5" />
                 <span>18:42:15</span>
               </div>
             </div>
-            <div className="text-[11px] text-red-200 mt-1">
+            <div className="text-[11px] text-white/80 mt-1">
               سطح شما: <strong className="text-white">{roleInfo.titleFa}</strong> ({roleInfo.discountPercentage}٪ کسر B2B)
             </div>
           </div>
@@ -76,7 +76,7 @@ export const IncredibleOffers: React.FC<IncredibleOffersProps> = ({
                     <span className="text-[10px] font-bold font-mono bg-gray-100 text-gray-700 px-2 py-0.5 rounded">
                       {comp.manufacturer}
                     </span>
-                    <span className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded flex items-center gap-0.5 shadow-2xs">
+                    <span className="bg-[#3e6b4e] text-white text-xs font-bold px-2 py-0.5 rounded flex items-center gap-0.5 shadow-2xs">
                       <Percent className="w-3 h-3" />
                       {totalPercentOff}٪ تخفیف ریل
                     </span>
@@ -93,7 +93,7 @@ export const IncredibleOffers: React.FC<IncredibleOffersProps> = ({
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-mono font-black text-sm text-gray-900 group-hover:text-red-600 transition-colors truncate">
+                      <div className="font-mono font-black text-sm text-gray-900 group-hover:text-[#3e6b4e] transition-colors truncate">
                         {comp.partNumber}
                       </div>
                       <div className="text-xs text-gray-500 font-normal line-clamp-1 mt-0.5">
@@ -133,7 +133,7 @@ export const IncredibleOffers: React.FC<IncredibleOffersProps> = ({
                   </div>
 
                   <div className="flex items-baseline justify-between mb-3">
-                    <span className="text-xs font-semibold text-red-600">نرخ ریل کامل:</span>
+                    <span className="text-xs font-semibold text-[#3e6b4e]">نرخ ریل کامل:</span>
                     <div className="text-right">
                       <span className="text-base font-black text-gray-900 font-mono">
                         {discountedPrice.toLocaleString('fa-IR')}
@@ -151,7 +151,7 @@ export const IncredibleOffers: React.FC<IncredibleOffersProps> = ({
                     </button>
                     <button
                       onClick={() => onAddToCart(comp, comp.reelQuantity || 100, 'reel')}
-                      className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md text-xs font-bold transition-all shadow-2xs flex items-center justify-center gap-1"
+                      className="w-full bg-[#3e6b4e] hover:bg-[#335840] text-white py-2 rounded-md text-xs font-bold transition-all shadow-2xs flex items-center justify-center gap-1"
                     >
                       <Package className="w-3.5 h-3.5" />
                       <span>خرید ریل</span>

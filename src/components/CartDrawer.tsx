@@ -51,7 +51,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
           {/* Drawer Header */}
           <div className="p-4 sm:p-5 border-b border-gray-100 bg-gray-50 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-[#3e6b4e] text-white flex items-center justify-center">
                 <ShoppingCart className="w-4 h-4" />
               </div>
               <div>
@@ -111,7 +111,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
                     <button
                       onClick={() => onRemoveItem(item.productId)}
-                      className="text-gray-400 hover:text-red-600 p-1 transition-colors"
+                      className="text-gray-400 hover:text-[#3e6b4e] p-1 transition-colors"
                       title="حذف از سبد"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
@@ -182,7 +182,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 )}
                 <div className="flex justify-between text-gray-900 font-bold text-sm pt-1.5 border-t border-gray-200">
                   <span>مبلغ کل سبد خرید:</span>
-                  <span className="font-mono text-base text-red-600">
+                  <span className="font-mono text-base text-[#3e6b4e] font-black">
                     {finalSubtotal.toLocaleString('fa-IR')} تومان
                   </span>
                 </div>
@@ -194,7 +194,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     onClose();
                     onProceedToInvoice();
                   }}
-                  className="w-full bg-red-600 hover:bg-red-700 active:scale-98 text-white font-bold py-3 rounded-lg text-xs transition-all shadow-sm flex items-center justify-center gap-2"
+                  className="w-full bg-[#3e6b4e] hover:bg-[#335840] active:scale-98 text-white font-bold py-3 rounded-lg text-xs transition-all shadow-sm flex items-center justify-center gap-2"
                 >
                   <FileText className="w-4 h-4" />
                   <span>صدور پیش‌فاکتور رسمی و تسویه</span>
@@ -207,7 +207,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   </span>
                   <button
                     onClick={onClearCart}
-                    className="text-gray-400 hover:text-red-600 transition-colors"
+                    className="text-gray-400 hover:text-[#3e6b4e] transition-colors"
                   >
                     خالی کردن سبد
                   </button>

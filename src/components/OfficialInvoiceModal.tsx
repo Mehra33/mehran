@@ -83,7 +83,7 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
               onChange={(e) =>
                 setCustomerInfo({ ...customerInfo, officialInvoiceRequested: e.target.checked })
               }
-              className="rounded text-rose-600 focus:ring-rose-500 h-4 w-4"
+              className="rounded text-[#3e6b4e] focus:ring-[#3e6b4e] h-4 w-4"
             />
             <span>محاسبه مالیات بر ارزش افزوده ۱۰٪ (فاکتور دارایی)</span>
           </label>
@@ -92,7 +92,7 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
             onClick={handlePrint}
             className="bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-xs flex items-center gap-1.5"
           >
-            <Printer className="w-4 h-4 text-rose-400" />
+            <Printer className="w-4 h-4 text-[#95caa6]" />
             <span>چاپ و ذخیره PDF رسمی</span>
           </button>
         </div>
@@ -101,7 +101,7 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
       {/* Customer Info Form (Hidden on print) */}
       <div className="no-print bg-white rounded-3xl border border-slate-200 p-6 shadow-xs">
         <h3 className="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
-          <Building2 className="w-4 h-4 text-rose-600" />
+          <Building2 className="w-4 h-4 text-[#3e6b4e]" />
           <span>اطلاعات شرکت و خریدار حقوقی جهت ثبت در سامانه مودیان:</span>
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
@@ -176,7 +176,7 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
         {/* Invoice Top Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between border-b-2 border-slate-900 pb-6 mb-6 gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black text-xl">
+            <div className="w-12 h-12 rounded-xl bg-[#3e6b4e] text-white flex items-center justify-center font-black text-xl">
               دایا
             </div>
             <div>
@@ -190,7 +190,7 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
           </div>
 
           <div className="text-center sm:text-left bg-slate-50 border border-slate-200 rounded-2xl p-3 text-xs space-y-1 min-w-[220px]">
-            <div className="text-xs font-black text-rose-700 mb-1">
+            <div className="text-xs font-black text-[#2d523b] mb-1">
               {customerInfo.officialInvoiceRequested ? 'صورتحساب فروش کالا (رسمی)' : 'پیش‌فاکتور استعلام قیمت'}
             </div>
             <div className="flex justify-between text-[11px]">
@@ -228,7 +228,7 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
           <div className="border border-slate-300 rounded-2xl p-3.5 bg-slate-50/50 space-y-1.5">
             <div className="font-bold text-slate-900 text-xs border-b border-slate-200 pb-1 flex items-center justify-between">
               <span>مشخصات خریدار / شرکت متقاضی:</span>
-              <span className="text-[10px] bg-rose-100 text-rose-800 px-1.5 py-0.5 rounded">
+              <span className="text-[10px] bg-[#edf5f0] text-[#2d523b] border border-[#cbe0d2] px-1.5 py-0.5 rounded">
                 رتبه: {roleInfo.titleFa}
               </span>
             </div>
@@ -308,7 +308,7 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
                 </span>
                 <button
                   onClick={() => handleCopyIban('IR720120000000004521897412')}
-                  className="text-slate-500 hover:text-rose-600 text-[10px] flex items-center gap-1 font-sans"
+                  className="text-slate-500 hover:text-[#3e6b4e] text-[10px] flex items-center gap-1 font-sans"
                 >
                   {copiedIban ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
                   <span>{copiedIban ? 'کپی شد' : 'کپی شبا'}</span>
@@ -348,9 +348,9 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
                 </span>
               </div>
             )}
-            <div className="flex justify-between pt-2 text-sm font-black text-rose-700">
+            <div className="flex justify-between pt-2 text-sm font-black text-[#2d523b]">
               <span>مبلغ نهایی قابل پرداخت:</span>
-              <span className="font-mono text-base">
+              <span className="font-mono text-base font-black text-[#3e6b4e]">
                 {grandTotal.toLocaleString('fa-IR')} تومان
               </span>
             </div>
@@ -365,10 +365,10 @@ export const OfficialInvoiceModal: React.FC<OfficialInvoiceModalProps> = ({
           </div>
           <div>
             <div className="font-bold text-slate-800 mb-2">مهر و امضای شرکت دایا الکترونیک پیشرو:</div>
-            <div className="inline-block border-2 border-dashed border-rose-300 rounded-2xl p-3 bg-rose-50/50 text-rose-800 text-[10px]">
+            <div className="inline-block border-2 border-dashed border-[#cbe0d2] rounded-2xl p-3 bg-[#edf5f0] text-[#2d523b] text-[10px]">
               <div className="font-bold">شرکت دایا الکترونیک پیشرو</div>
               <div>واحد امور مالی و بازرگانی</div>
-              <div className="font-mono text-[9px] text-rose-600 mt-0.5">تایید سیستمی شناسه ۱۴۰۰۹۸۷۶۵۴۳</div>
+              <div className="font-mono text-[9px] text-[#3e6b4e] mt-0.5">تایید سیستمی شناسه ۱۴۰۰۹۸۷۶۵۴۳</div>
             </div>
           </div>
         </div>

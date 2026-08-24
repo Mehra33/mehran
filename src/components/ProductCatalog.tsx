@@ -127,12 +127,12 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-      {/* Left Parametric Filter Sidebar (Sleek Interface Style) */}
+      {/* Left Parametric Filter Sidebar */}
       <div className="lg:col-span-1 space-y-4">
         <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm sticky top-24 space-y-5">
           <div className="flex items-center justify-between pb-3 border-b border-gray-100">
             <div className="flex items-center gap-2 font-bold text-gray-900 text-xs uppercase tracking-wider">
-              <Filter className="w-3.5 h-3.5 text-red-600" />
+              <Filter className="w-3.5 h-3.5 text-[#3e6b4e]" />
               <span>فیلترهای پارامتریک و مشخصات فنی</span>
             </div>
             {(selectedCategory !== 'all' ||
@@ -149,7 +149,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                   setStockOnlyTehran(false);
                   setOriginalsOnly(false);
                 }}
-                className="text-xs text-red-600 hover:text-red-700 font-medium"
+                className="text-xs text-[#3e6b4e] hover:text-[#335840] font-medium"
               >
                 پاکسازی
               </button>
@@ -167,7 +167,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                 type="checkbox"
                 checked={stockOnlyTehran}
                 onChange={(e) => setStockOnlyTehran(e.target.checked)}
-                className="rounded text-red-600 focus:ring-red-500 h-4 w-4"
+                className="rounded text-[#3e6b4e] focus:ring-[#3e6b4e] h-4 w-4"
               />
             </label>
 
@@ -180,7 +180,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                 type="checkbox"
                 checked={originalsOnly}
                 onChange={(e) => setOriginalsOnly(e.target.checked)}
-                className="rounded text-red-600 focus:ring-red-500 h-4 w-4"
+                className="rounded text-[#3e6b4e] focus:ring-[#3e6b4e] h-4 w-4"
               />
             </label>
           </div>
@@ -198,7 +198,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                 }}
                 className={`w-full text-right px-2.5 py-1.5 rounded-md text-xs flex items-center justify-between transition-colors ${
                   selectedCategory === 'all'
-                    ? 'bg-red-50 text-red-700 font-bold'
+                    ? 'bg-[#edf5f0] text-[#2d523b] font-bold'
                     : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
@@ -216,7 +216,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                     }}
                     className={`w-full text-right px-2.5 py-1.5 rounded-md text-xs flex items-center justify-between transition-colors ${
                       selectedCategory === cat.id
-                        ? 'bg-red-50 text-red-700 font-bold'
+                        ? 'bg-[#edf5f0] text-[#2d523b] font-bold'
                         : 'text-gray-600 hover:bg-gray-50'
                     }`}
                   >
@@ -270,7 +270,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
             <select
               value={selectedManufacturer}
               onChange={(e) => setSelectedManufacturer(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-md px-3 py-2 text-xs text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 font-mono"
+              className="w-full bg-gray-50 border border-gray-200 rounded-md px-3 py-2 text-xs text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#3e6b4e] font-mono"
             >
               <option value="all">همه برندها (All Brands)</option>
               {allManufacturers.map((mfr) => (
@@ -289,7 +289,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
             <select
               value={selectedPackage}
               onChange={(e) => setSelectedPackage(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-md px-3 py-2 text-xs text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 font-mono"
+              className="w-full bg-gray-50 border border-gray-200 rounded-md px-3 py-2 text-xs text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#3e6b4e] font-mono"
             >
               <option value="all">همه پکیج‌ها (All Footprints)</option>
               {allPackages.map((pkg) => (
@@ -300,12 +300,12 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
             </select>
           </div>
 
-          {/* Wholesale Manager Callout (Signature Sleek Interface Element) */}
-          <div className="bg-red-50 rounded-lg p-4 border border-red-100 text-right">
-            <span className="text-xs font-bold text-red-600 block mb-1 font-en uppercase tracking-wider">
+          {/* Wholesale Manager Callout */}
+          <div className="bg-[#edf5f0] rounded-lg p-4 border border-[#cbe0d2] text-right">
+            <span className="text-xs font-bold text-[#3e6b4e] block mb-1 font-en uppercase tracking-wider">
               WHOLESALE MANAGER
             </span>
-            <p className="text-[11px] text-red-900 leading-relaxed">
+            <p className="text-[11px] text-[#2d523b] leading-relaxed">
               جهت سفارش‌های تیراژ کانتینری و استعلام واردات مستقیم از شنزن چین با واحد مهندسی دایا در تماس باشید.
             </p>
           </div>
@@ -322,7 +322,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
             </span>
             <span>قلم قطعه الکترونیک منطبق</span>
             {searchQuery && (
-              <span className="bg-red-50 text-red-700 px-2 py-0.5 rounded font-mono">
+              <span className="bg-[#edf5f0] text-[#2d523b] px-2 py-0.5 rounded font-mono">
                 برای «{searchQuery}»
               </span>
             )}
@@ -346,7 +346,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                   onClick={() => setSortBy(sortItem.id as any)}
                   className={`px-2.5 py-1.5 rounded-md whitespace-nowrap transition-colors ${
                     sortBy === sortItem.id
-                      ? 'bg-red-600 text-white font-bold'
+                      ? 'bg-[#3e6b4e] text-white font-bold'
                       : 'text-gray-600 hover:bg-gray-100'
                   }`}
                 >
@@ -367,7 +367,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
             </p>
             <button
               onClick={() => onOpenAdvisorWithPart(searchQuery || 'قطعه ناموجود')}
-              className="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded-md transition-all shadow-sm inline-flex items-center gap-1.5"
+              className="bg-[#3e6b4e] hover:bg-[#335840] text-white text-xs font-semibold px-4 py-2 rounded-md transition-all shadow-sm inline-flex items-center gap-1.5"
             >
               <Sparkles className="w-4 h-4" />
               استعلام معادل و واردات مستقیم شنژن با هوش مصنوعی
@@ -431,7 +431,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const savingsAmount = (baseSinglePrice - finalUnitPrice) * selectedQty;
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 hover:border-red-200 hover:ring-1 hover:ring-red-100 shadow-sm transition-all p-4 flex flex-col justify-between group">
+    <div className="bg-white rounded-xl border border-gray-200 hover:border-[#b6d3c0] hover:ring-1 hover:ring-[#b6d3c0] shadow-sm transition-all p-4 flex flex-col justify-between group">
       <div>
         {/* Header Badges */}
         <div className="flex items-center justify-between gap-2 mb-2.5">
@@ -452,7 +452,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               </span>
             )}
             {component.isFlashDeal && (
-              <span className="text-[10px] font-bold text-red-700 bg-red-50 border border-red-200 px-1.5 py-0.5 rounded">
+              <span className="text-[10px] font-bold text-[#2d523b] bg-[#edf5f0] border border-[#cbe0d2] px-1.5 py-0.5 rounded">
                 شگفت‌انگیز
               </span>
             )}
@@ -470,7 +470,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-mono font-black text-sm text-gray-900 group-hover:text-red-600 transition-colors">
+            <h3 className="font-mono font-black text-sm text-gray-900 group-hover:text-[#3e6b4e] transition-colors">
               {component.partNumber}
             </h3>
             <p className="text-xs text-gray-600 font-normal line-clamp-2 mt-1 leading-relaxed">
@@ -520,7 +520,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                   key={idx}
                   onClick={() => setSelectedQty(tier.minQty)}
                   className={`grid grid-cols-3 p-1.5 text-center cursor-pointer transition-colors text-[11px] ${
-                    isSelected ? 'bg-red-50 text-red-900 font-bold' : 'hover:bg-gray-100 text-gray-700'
+                    isSelected ? 'bg-[#edf5f0] text-[#223e2d] font-bold' : 'hover:bg-gray-100 text-gray-700'
                   }`}
                 >
                   <span className="font-mono">{tier.labelFa}</span>
@@ -600,7 +600,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           <button
             onClick={() => onAddToCart(selectedQty, selectedPackaging)}
-            className="flex-1 bg-red-600 hover:bg-red-700 active:scale-95 text-white py-2 px-3 rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1"
+            className="flex-1 bg-[#3e6b4e] hover:bg-[#335840] active:scale-95 text-white py-2 px-3 rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1"
           >
             <Package className="w-3.5 h-3.5" />
             <span>افزودن به سبد</span>
@@ -616,7 +616,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 <button
                   key={alt}
                   onClick={onOpenAdvisor}
-                  className="bg-gray-100 hover:bg-red-50 hover:text-red-700 px-1.5 py-0.5 rounded text-[10px] transition-colors"
+                  className="bg-gray-100 hover:bg-[#edf5f0] hover:text-[#2d523b] px-1.5 py-0.5 rounded text-[10px] transition-colors"
                 >
                   {alt}
                 </button>

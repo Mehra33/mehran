@@ -151,7 +151,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col justify-between selection:bg-red-600 selection:text-white font-sans">
+    <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col justify-between selection:bg-[#3e6b4e] selection:text-white font-sans">
       {/* Top Header */}
       <Header
         currentRole={currentRole}
@@ -233,7 +233,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-xs">
             <div className="flex flex-col items-center space-y-2 p-2">
-              <div className="w-12 h-12 rounded-lg bg-red-50 text-red-600 flex items-center justify-center border border-red-100">
+              <div className="w-12 h-12 rounded-lg bg-[#edf5f0] text-[#3e6b4e] flex items-center justify-center border border-[#cbe0d2]">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <strong className="font-bold text-gray-900">تضمین اصالت ۱۰۰٪ قطعات</strong>
@@ -273,7 +273,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-white font-black text-lg">
-                <div className="w-7 h-7 bg-red-600 rounded flex items-center justify-center text-white text-sm font-bold">D</div>
+                <div className="w-7 h-7 bg-[#3e6b4e] rounded flex items-center justify-center text-white text-sm font-bold">D</div>
                 <span>دایا الکترونیک</span>
               </div>
               <p className="text-xs text-gray-400 leading-relaxed">

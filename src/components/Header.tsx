@@ -52,10 +52,10 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="bg-gray-900 text-gray-200 text-xs py-1.5 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-4">
-            <span className="inline-flex items-center gap-2 text-red-400 font-medium">
+            <span className="inline-flex items-center gap-2 text-[#95caa6] font-medium">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#95caa6] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#477656]"></span>
               </span>
               تخفیف ویژه ریل کامل قطعات پسیو و میکروکنترلرها در دایا الکترونیک
             </span>
@@ -76,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <span className="text-gray-700">|</span>
             <div className="flex items-center gap-1.5 text-gray-400">
-              <PhoneCall className="w-3.5 h-3.5 text-red-500" />
+              <PhoneCall className="w-3.5 h-3.5 text-[#95caa6]" />
               <span className="font-mono">۰۲۱-۶۶۷۵xxxx</span>
             </div>
           </div>
@@ -86,18 +86,18 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Main Sleek Interface Header Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5">
         <div className="flex items-center justify-between gap-3 lg:gap-8">
-          {/* Logo & Brand (Matching Sleek Interface Red Square Emblem) */}
+          {/* Logo & Brand (Matching Sleek Interface Sedri Green Square Emblem) */}
           <div className="flex items-center gap-3">
             <button 
               onClick={() => { setActiveTab('catalog'); onCategorySelect('all'); }} 
               className="flex items-center gap-2.5 text-right group"
             >
-              <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-black text-xl shadow-sm group-hover:bg-red-700 transition-colors">
+              <div className="w-10 h-10 bg-[#3e6b4e] rounded-lg flex items-center justify-center text-white font-black text-xl shadow-sm group-hover:bg-[#335840] transition-colors">
                 D
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-2xl font-black text-red-600 tracking-tighter font-en">DAYA</span>
+                  <span className="text-2xl font-black text-[#3e6b4e] tracking-tighter font-en">DAYA</span>
                   <span className="text-sm font-bold text-gray-900">دایا الکترونیک</span>
                 </div>
                 <span className="text-[10px] text-gray-400 font-en tracking-wider font-semibold block uppercase">WHOLESALE ELECTRONICS</span>
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
 
-          {/* Search Input Bar (Sleek Interface style) */}
+          {/* Search Input Bar */}
           <div className="flex-1 max-w-xl relative">
             <div className="relative">
               <input
@@ -113,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
                 placeholder="جستجوی پارت‌نامبر، میکروکنترلر، پکیج (مثلاً STM32F103, ESP32, SMD 0805, AMS1117)..."
-                className="w-full bg-gray-100 hover:bg-gray-100/90 focus:bg-white border-none rounded-md py-2.5 pr-10 pl-24 text-sm focus:ring-2 focus:ring-red-500 outline-none text-gray-900 placeholder:text-gray-400 transition-all shadow-2xs"
+                className="w-full bg-gray-100 hover:bg-gray-100/90 focus:bg-white border-none rounded-md py-2.5 pr-10 pl-24 text-sm focus:ring-2 focus:ring-[#3e6b4e] outline-none text-gray-900 placeholder:text-gray-400 transition-all shadow-2xs"
               />
               <Search className="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" />
 
@@ -127,10 +127,10 @@ export const Header: React.FC<HeaderProps> = ({
               )}
               <button 
                 onClick={onOpenAdvisor}
-                className="absolute left-1.5 top-1/2 -translate-y-1/2 bg-red-50 hover:bg-red-100 text-red-700 text-xs px-2.5 py-1 rounded font-medium flex items-center gap-1 transition-colors border border-red-200"
+                className="absolute left-1.5 top-1/2 -translate-y-1/2 bg-[#edf5f0] hover:bg-[#e2efe6] text-[#2d523b] text-xs px-2.5 py-1 rounded font-medium flex items-center gap-1 transition-colors border border-[#cbe0d2]"
                 title="مشاوره هوشمند جایگزین پین‌به‌پین و استعلام قطعه"
               >
-                <Sparkles className="w-3.5 h-3.5 text-red-600" />
+                <Sparkles className="w-3.5 h-3.5 text-[#3e6b4e]" />
                 <span className="hidden sm:inline">مشاور AI</span>
               </button>
             </div>
@@ -175,7 +175,7 @@ export const Header: React.FC<HeaderProps> = ({
                           setIsRoleDropdownOpen(false);
                         }}
                         className={`w-full text-right p-2.5 rounded-lg text-xs flex items-start justify-between transition-colors mb-1 ${
-                          currentRole === role.id ? 'bg-red-50 border border-red-200 text-red-900 font-bold' : 'hover:bg-gray-50 text-gray-700'
+                          currentRole === role.id ? 'bg-[#edf5f0] border border-[#cbe0d2] text-[#223e2d] font-bold' : 'hover:bg-gray-50 text-gray-700'
                         }`}
                       >
                         <div>
@@ -191,7 +191,7 @@ export const Header: React.FC<HeaderProps> = ({
                             {role.descriptionFa}
                           </p>
                         </div>
-                        {currentRole === role.id && <Check className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />}
+                        {currentRole === role.id && <Check className="w-4 h-4 text-[#3e6b4e] shrink-0 mt-0.5" />}
                       </button>
                     ))}
                   </div>
@@ -202,12 +202,12 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Cart Button */}
             <button
               onClick={onOpenCart}
-              className="relative flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3.5 py-2.5 rounded-md text-xs font-semibold transition-all shadow-sm"
+              className="relative flex items-center gap-2 bg-[#3e6b4e] hover:bg-[#335840] text-white px-3.5 py-2.5 rounded-md text-xs font-semibold transition-all shadow-sm"
             >
               <ShoppingCart className="w-4 h-4" />
               <span className="hidden sm:inline">سبد خرید</span>
               {totalCartCount > 0 && (
-                <span className="bg-white text-red-600 text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+                <span className="bg-white text-[#3e6b4e] text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
                   {totalCartCount > 99 ? '+99' : totalCartCount}
                 </span>
               )}
@@ -216,7 +216,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Navigation Bar (Sleek Interface Tab Bar with Underline Active State) */}
+      {/* Navigation Bar */}
       <div className="bg-white border-t border-gray-200 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-sm font-medium text-gray-600 overflow-x-auto">
           <div className="flex items-center space-x-6 space-x-reverse">
@@ -224,7 +224,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => { setActiveTab('catalog'); onCategorySelect('all'); }}
               className={`py-3 transition-colors flex items-center gap-1.5 ${
                 activeTab === 'catalog' && selectedCategory === 'all'
-                  ? 'text-red-600 border-b-2 border-red-600 font-bold -mb-[1px]'
+                  ? 'text-[#3e6b4e] border-b-2 border-[#3e6b4e] font-bold -mb-[1px]'
                   : 'hover:text-gray-900'
               }`}
             >
@@ -238,7 +238,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={() => { setActiveTab('catalog'); onCategorySelect(cat.id); }}
                 className={`py-3 transition-colors hidden md:inline-flex items-center gap-1 ${
                   selectedCategory === cat.id && activeTab === 'catalog'
-                    ? 'text-red-600 border-b-2 border-red-600 font-bold -mb-[1px]'
+                    ? 'text-[#3e6b4e] border-b-2 border-[#3e6b4e] font-bold -mb-[1px]'
                     : 'hover:text-gray-900'
                 }`}
               >
@@ -250,7 +250,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => setActiveTab('bom')}
               className={`py-3 transition-colors flex items-center gap-1.5 whitespace-nowrap ${
                 activeTab === 'bom'
-                  ? 'text-red-600 border-b-2 border-red-600 font-bold -mb-[1px]'
+                  ? 'text-[#3e6b4e] border-b-2 border-[#3e6b4e] font-bold -mb-[1px]'
                   : 'hover:text-gray-900'
               }`}
             >
@@ -262,7 +262,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => setActiveTab('invoice')}
               className={`py-3 transition-colors flex items-center gap-1.5 whitespace-nowrap ${
                 activeTab === 'invoice'
-                  ? 'text-red-600 border-b-2 border-red-600 font-bold -mb-[1px]'
+                  ? 'text-[#3e6b4e] border-b-2 border-[#3e6b4e] font-bold -mb-[1px]'
                   : 'hover:text-gray-900'
               }`}
             >
